@@ -6,58 +6,91 @@
   <style>
     body {
       font-family: 'Microsoft YaHei', sans-serif;
-      background: linear-gradient(to bottom, #fdfbfb, #ebedee);
-      color: #333;
-      padding: 60px 20px;
+      background-color: #f4f6f8;
+      margin: 0;
+      padding: 0;
+      color: #2c3e50;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 80px auto;
+      padding: 40px;
+      background-color: #ffffff;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
       text-align: center;
     }
+
     h1 {
-      font-size: 36px;
-      margin-bottom: 30px;
+      font-size: 42px;
+      margin-bottom: 25px;
       color: #1a1a1a;
     }
+
     .intro {
-      max-width: 800px;
-      margin: 0 auto 40px;
       font-size: 18px;
       line-height: 1.8;
-      color: #444;
-      background-color: #fff;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      margin-bottom: 40px;
+      color: #555;
     }
+
     button {
-      padding: 15px 30px;
+      padding: 16px 32px;
       font-size: 18px;
-      border: none;
+      font-weight: bold;
       background-color: #007ACC;
       color: white;
-      border-radius: 8px;
+      border: none;
+      border-radius: 10px;
       cursor: pointer;
-      transition: background-color 0.3s ease;
+      transition: background-color 0.3s ease, transform 0.2s ease;
     }
+
     button:hover {
-      background-color: #005F99;
+      background-color: #005f99;
+      transform: scale(1.05);
+    }
+
+    @media screen and (max-width: 600px) {
+      .container {
+        margin: 40px 20px;
+        padding: 20px;
+      }
+
+      h1 {
+        font-size: 28px;
+      }
+
+      .intro {
+        font-size: 16px;
+      }
+
+      button {
+        font-size: 16px;
+        padding: 12px 24px;
+      }
     }
   </style>
 </head>
 <body>
 
-  <h1>全球文科倒闭潮</h1>
+  <div class="container">
+    <h1>全球文科倒闭潮</h1>
 
-  <div class="intro">
-    近年来，全球范围内的高校陆续调整专业设置，<strong>文科专业频频被缩招、合并，甚至停招</strong>。
-    新闻、哲学、社会学、法学等专业，正面临前所未有的生存危机。
-    <br><br>
-    在就业压力、技术浪潮与政策导向的多重影响下，这一波“文科倒闭潮”正在引发公众热议——
-    <br><br>
-    <strong>我们如何理解这场“文科危机”？网民们怎么看？</strong>
+    <div class="intro">
+      近年来，全球范围内的高校陆续调整专业设置，<strong>文科专业频频被缩招、合并，甚至停招</strong>。
+      新闻、哲学、社会学、法学等专业，正面临前所未有的生存危机。
+      <br><br>
+      在就业压力、技术浪潮与政策导向的多重影响下，这一波“文科倒闭潮”正在引发公众热议——
+      <br><br>
+      <strong>我们如何理解这场“文科危机”？网民们怎么看？</strong>
+    </div>
+
+    <button onclick="window.location.href='https://flo.host/JfXr2ZY/'">
+      全球高校文科调整情况
+    </button>
   </div>
-
-  <button onclick="window.location.href='https://flo.host/JfXr2ZY/'">
-    全球高校文科调整情况
-  </button>
 
 </body>
 </html>
