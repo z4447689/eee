@@ -1,79 +1,51 @@
-<!-- index.html：入口页，展示大学受影响数据 -->
 <!DOCTYPE html>
 <html lang="zh">
 <head>
-  <meta charset="UTF-8">
-  <title>受影响大学列表</title>
-  <style>
-    body {
-      font-family: 'Microsoft YaHei', sans-serif;
-      background-color: #f5f5f5;
-      padding: 40px;
-      text-align: center;
-    }
-    h1 {
-      color: #333;
-    }
-    #data-container {
-      margin-top: 30px;
-      text-align: left;
-      max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .university-card {
-      background-color: #fff;
-      margin: 10px 0;
-      padding: 15px;
-      border-radius: 8px;
-      box-shadow: 0 0 5px rgba(0,0,0,0.1);
-    }
-    .btn-next {
-      margin-top: 30px;
-      padding: 12px 25px;
-      font-size: 16px;
-      background-color: #007ACC;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-    }
-    .btn-next:hover {
-      background-color: #005F99;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <title>哪些高校、哪些专业受到冲击最大？</title>
+    <style>
+        body {
+            font-family: 'Microsoft YaHei', sans-serif;
+            background-color: #f0f0f0;
+            padding: 40px;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        p {
+            color: #555;
+            font-size: 18px;
+            margin-bottom: 40px;
+        }
+        .btn-next {
+            padding: 12px 25px;
+            background-color: #007ACC;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .btn-next:hover {
+            background-color: #005F99;
+        }
+        img {
+            margin-top: 30px;
+            max-width: 90%;
+            height: auto;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 0 8px rgba(0,0,0,0.1);
+        }
+    </style>
 </head>
 <body>
-  <h1>受影响大学与文科专业列表</h1>
-  <div id="data-container">加载中...</div>
-
-  <button class="btn-next" onclick="window.location.href='visualization.html'">继续查看网友观点分析 →</button>
-
-  <script>
-    const data = [
-      {
-        id: 1,
-        university_name: "Southern Utah University (SUU)",
-        country: "美国",
-        affected_majors: ["人类学", "社会学", "法语", "西班牙语", "历史"]
-      },
-      {
-        id: 2,
-        university_name: "West Virginia University (WVU)",
-        country: "美国",
-        affected_majors: ["世界语言", "文学研究", "新闻学", "语言学", "地理学"]
-      }
-      // 你可以添加更多学校数据
-    ];
-
-    const container = document.getElementById('data-container');
-    container.innerHTML = '';
-    data.forEach(univ => {
-      const div = document.createElement('div');
-      div.className = 'university-card';
-      div.innerHTML = `<strong>${univ.university_name}</strong>（${univ.country}）<br>受影响专业：${univ.affected_majors.join(', ')}`;
-      container.appendChild(div);
-    });
-  </script>
+    <h1>哪些高校、哪些专业受到冲击最大？</h1>
+    <p>根据B站弹幕用户统计，以下高校与专业受到“文科缩招”讨论影响最为明显。</p>
+    <img src="热词地图示意图.png" alt="高校热词地图图示">
+    <br>
+    <button class="btn-next" onclick="window.location.href='ditu.html'">继续查看网友观点分析 →</button>
 </body>
 </html>
