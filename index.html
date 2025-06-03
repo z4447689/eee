@@ -3,80 +3,74 @@
 <head>
   <meta charset="UTF-8" />
   <title>全球文科倒闭潮</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
-      margin: 0;
       font-family: 'Microsoft YaHei', sans-serif;
-      background: linear-gradient(to right, #e0f7fa, #f1f8e9);
-      color: #333;
+      background: linear-gradient(to bottom, #e0f2ff, #f7faff);
+      margin: 0;
+      padding: 0;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      min-height: 100vh;
-      padding: 40px 20px;
+      height: 100vh;
+      color: #333;
     }
 
-    h1 {
-      font-size: 48px;
-      font-weight: bold;
-      color: #007ACC;
-      margin-bottom: 30px;
+    .container {
+      max-width: 800px;
+      padding: 40px;
+      background-color: #ffffffdd;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      border-radius: 12px;
       text-align: center;
     }
 
-    .content-box {
-      background: #ffffff;
-      border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-      padding: 30px;
-      max-width: 800px;
-      text-align: left;
-      font-size: 18px;
-      line-height: 1.8;
-      margin-bottom: 40px;
+    h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+      color: #005F99;
     }
 
-    .content-box p {
-      margin-bottom: 15px;
+    p {
+      font-size: 18px;
+      line-height: 1.8;
+      margin-bottom: 30px;
     }
 
     .btn {
+      padding: 14px 28px;
+      font-size: 18px;
       background-color: #007ACC;
       color: white;
-      padding: 16px 32px;
-      font-size: 18px;
       border: none;
-      border-radius: 8px;
+      border-radius: 10px;
       cursor: pointer;
-      transition: all 0.3s ease;
+      transition: background-color 0.3s ease;
     }
 
     .btn:hover {
       background-color: #005F99;
-      transform: scale(1.05);
     }
 
     @media (max-width: 600px) {
-      h1 { font-size: 32px; }
-      .content-box { font-size: 16px; padding: 20px; }
+      h1 { font-size: 28px; }
+      p { font-size: 16px; }
       .btn { font-size: 16px; padding: 12px 24px; }
     }
   </style>
 </head>
 <body>
-  <h1>全球文科倒闭潮</h1>
-
-  <div class="content-box">
-    <p>近年来，全球范围内的高校陆续调整专业设置，文科专业频频被缩招、合并，甚至停招。</p>
-    <p>新闻、哲学、社会学、法学等专业，正面临前所未有的生存危机。</p>
-    <p>在就业压力、技术浪潮与政策导向的多重影响下，这一波“文科倒闭潮”正在引发公众热议——</p>
-    <p><strong>我们如何理解这场“文科危机”？网民们怎么看？</strong></p>
+  <div class="container">
+    <h1>全球文科倒闭潮</h1>
+    <p>
+      近年来，全球范围内的高校陆续调整专业设置，文科专业频频被缩招、合并，甚至停招。
+      新闻、哲学、社会学、法学等专业，正面临前所未有的生存危机。
+      在就业压力、技术浪潮与政策导向的多重影响下，这一波“文科倒闭潮”正在引发公众热议——
+      我们如何理解这场“文科危机”？网民们怎么看？
+    </p>
+    <button class="btn" onclick="window.location.href='ditu.html'">全球高校文科停招情况</button>
   </div>
-
- <button onclick="window.location.href='ditu.html'">全球高校文科调整情况</button>
-  </button>
 </body>
 </html>
 
