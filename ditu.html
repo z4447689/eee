@@ -1,67 +1,37 @@
 <!DOCTYPE html>
 <html lang="zh">
 <head>
-    <meta charset="UTF-8" />
-    <title>全球文科倒闭潮下的网友看法</title>
-    <style>
-        body {
-            font-family: 'Microsoft YaHei', sans-serif;
-            background-color: #f8f8f8;
-            text-align: center;
-            padding: 40px;
-        }
-        h1 {
-            color: #333;
-            margin-bottom: 20px;
-        }
-        .button-container {
-            margin: 30px 0;
-        }
-        .btn {
-            padding: 12px 25px;
-            margin: 10px;
-            background-color: #007ACC;
-            color: white;
-            border: none;
-            border-radius: 8px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-        .btn:hover {
-            background-color: #005F99;
-        }
-        #image-container {
-            margin-top: 30px;
-        }
-        #image-container img {
-            max-width: 800px;
-            max-height: 600px;
-            width: auto;
-            height: auto;
-            border: 1px solid #ccc;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            border-radius: 8px;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <title>交互地图</title>
+  <style>
+    body { font-family: 'Microsoft YaHei', sans-serif; padding: 20px; text-align: center; }
+    iframe {
+      width: 100%;
+      height: 600px;
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+    }
+    button {
+      padding: 12px 25px;
+      font-size: 16px;
+      border: none;
+      background-color: #007ACC;
+      color: white;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #005F99;
+    }
+  </style>
 </head>
 <body>
-    <h1>全球文科倒闭潮下的网友看法</h1>
-
-    <div id="image-container">
-        <img src="总体词云图.jpg" alt="总体词云图" />
-    </div>
-
-    <div class="button-container">
-        <button class="btn" onclick="showImage('新闻专业柱状图.png')">新闻专业</button>
-        <button class="btn" onclick="showImage('法律专业柱状图.png')">法律专业</button>
-        <button class="btn" onclick="showImage('社会学专业柱状图.png')">社会学专业</button>
-        <button class="btn" onclick="showImage('哲学专业柱状图.png')">哲学专业</button>
-    </div>
-
-    <script>
-        function showImage(imagePath) {
-            document.querySelector('#image-container img').src = imagePath;
-        }
-    </script>
+  <h1>交互地图展示</h1>
+  <!-- 这里用 iframe 嵌入你的在线交互地图 -->
+  <iframe src="https://flo.host/p-Fyuda/" title="交互地图"></iframe>
+  
+  <button onclick="window.location.href='analysis.html'">查看分析内容</button>
 </body>
 </html>
