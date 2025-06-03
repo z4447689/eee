@@ -1,51 +1,109 @@
 <!DOCTYPE html>
 <html lang="zh">
 <head>
-    <meta charset="UTF-8">
-    <title>哪些高校、哪些专业受到冲击最大？</title>
-    <style>
-        body {
-            font-family: 'Microsoft YaHei', sans-serif;
-            background-color: #f0f0f0;
-            padding: 40px;
-            text-align: center;
-        }
-        h1 {
-            color: #333;
-            margin-bottom: 20px;
-        }
-        p {
-            color: #555;
-            font-size: 18px;
-            margin-bottom: 40px;
-        }
-        .btn-next {
-            padding: 12px 25px;
-            background-color: #007ACC;
-            color: white;
-            border: none;
-            border-radius: 8px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-        .btn-next:hover {
-            background-color: #005F99;
-        }
-        img {
-            margin-top: 30px;
-            max-width: 90%;
-            height: auto;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            box-shadow: 0 0 8px rgba(0,0,0,0.1);
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <title>哪些高校、哪些专业受到冲击最大？</title>
+  <script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+  <style>
+    body {
+      font-family: 'Microsoft YaHei', sans-serif;
+      background-color: #f0f0f0;
+      padding: 40px;
+      text-align: center;
+    }
+    h1 {
+      color: #333;
+      margin-bottom: 20px;
+    }
+    #main-map {
+      width: 90%;
+      height: 600px;
+      margin: 0 auto 30px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background: #fff;
+    }
+    .btn-next {
+      padding: 12px 25px;
+      background-color: #007ACC;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .btn-next:hover {
+      background-color: #005F99;
+    }
+  </style>
 </head>
 <body>
-    <h1>哪些高校、哪些专业受到冲击最大？</h1>
-    <p>根据B站弹幕用户统计，以下高校与专业受到“文科缩招”讨论影响最为明显。</p>
-    <img src="热词地图示意图.png" alt="高校热词地图图示">
-    <br>
-    <button class="btn-next" onclick="window.location.href='ditu.html'">继续查看网友观点分析 →</button>
+  <h1>哪些高校、哪些专业受到冲击最大？</h1>
+  <div id="main-map"></div>
+  <button class="btn-next" onclick="window.location.href='ditu.html'">继续查看网友观点分析 →</button>
+
+  <script>
+    var chart = echarts.init(document.getElementById('main-map'));
+
+    var option = {
+      title: {
+        text: '高校热词热力图（示意）',
+        left: 'center'
+      },
+      tooltip: {
+        trigger: 'item'
+      },
+      geo: {
+        map: 'china',
+        roam: true,
+        label: {
+          show: false
+        },
+        itemStyle: {
+          areaColor: '#e0f3ff',
+          borderColor: '#999'
+        }
+      },
+      series: [
+        {
+          name: '讨论热度',
+          type: 'scatter',
+          coordinateSystem: 'geo',
+          symbolSize: function (val) {
+            return val[2] / 10;
+          },
+          data: [
+            { name: '北京大学', value: [116.32, 39.99, 90] },
+            { name: '复旦大学', value: [121.5, 31.2, 70] },
+            { name: '武汉大学', value: [114.3, 30.5, 60] },
+            { name: '中山大学', value: [113.3, 23.1, 50] },
+            { name: '南京大学', value: [118.78, 32.04, 45] }
+            // 可继续添加高校
+          ],
+          label: {
+            formatter: '{b}',
+            position: 'right',
+            show: true
+          },
+          emphasis: {
+            label: {
+              show: true
+            }
+          },
+          itemStyle: {
+            color: '#d94e5d'
+          }
+        }
+      ]
+    };
+
+    // 加载中国地图（重要）
+    fetch('https://geo.datav.aliyun.com/areas/bound/100000_full.json')
+      .then(res => res.json())
+      .then(geoJson => {
+        echarts.registerMap('china', geoJson);
+        chart.setOption(option);
+      });
+  </script>
 </body>
 </html>
