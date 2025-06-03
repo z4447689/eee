@@ -2,25 +2,24 @@
 <html lang="zh">
 <head>
   <meta charset="UTF-8" />
-  <title>首页跳转示例</title>
+  <title>首页跳转按钮</title>
   <style>
     body {
-      font-family: 'Microsoft YaHei', sans-serif;
-      background-color: #f4f4f4;
-      text-align: center;
-      padding: 50px;
-    }
-    h1 {
-      color: #333;
-      margin-bottom: 20px;
+      font-family: "Microsoft YaHei", sans-serif;
+      background-color: #f0f0f0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
     }
     button {
-      padding: 15px 30px;
+      padding: 16px 40px;
       font-size: 18px;
+      border: none;
+      border-radius: 8px;
       background-color: #007ACC;
       color: white;
-      border: none;
-      border-radius: 10px;
       cursor: pointer;
       transition: background-color 0.3s ease;
     }
@@ -30,8 +29,8 @@
   </style>
 </head>
 <body>
-  <h1>欢迎访问</h1>
-  <button onclick="window.location.href='https://flo.host/p-Fyuda/'">进入交互地图</button>
+  <button onclick="window.location.href='https://flo.host/p-Fyuda/'">
+    打开交互地图
+  </button>
 </body>
 </html>
-
