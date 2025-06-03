@@ -2,27 +2,27 @@
 <html lang="zh">
 <head>
   <meta charset="UTF-8" />
-  <title>交互地图</title>
+  <title>全球高校文科调整地图</title>
   <style>
     body {
       font-family: 'Microsoft YaHei', sans-serif;
-      padding: 20px;
+      background-color: #f9f9f9;
+      padding: 40px 20px 100px;
       text-align: center;
-      background-color: #f4f7fa;
-      padding-bottom: 100px;
     }
     h1 {
       font-size: 28px;
-      margin-bottom: 30px;
+      margin-bottom: 20px;
       color: #333;
     }
     iframe {
       width: 100%;
-      height: 500px;
+      max-width: 1000px;
+      height: 550px;
       border: none;
       border-radius: 10px;
       box-shadow: 0 0 15px rgba(0,0,0,0.1);
-      margin-bottom: 20px;
+      margin-bottom: 30px;
     }
     .btn {
       padding: 14px 28px;
@@ -32,7 +32,6 @@
       border: none;
       border-radius: 10px;
       cursor: pointer;
-      margin-top: 20px;
     }
     .btn:hover {
       background-color: #005f99;
@@ -42,8 +41,10 @@
 <body>
   <h1>全球高校文科调整交互地图</h1>
 
-  <iframe src="https://flo.host/p-Fyuda/" title="交互地图展示"></iframe>
+  <!-- 嵌入 flo.host 地图 -->
+  <iframe src="https://flo.host/JfXr2ZY/" title="交互地图"></iframe>
 
-  <button class="btn" onclick="window.location.href='analysis.html'">查看分析内容</button>
+  <!-- 跳转按钮 -->
+  <button class="btn" onclick="window.location.href='analysis.html'">查看网友弹幕分析</button>
 </body>
 </html>
