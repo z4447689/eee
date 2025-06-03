@@ -2,29 +2,43 @@
 <html lang="zh">
 <head>
   <meta charset="UTF-8" />
-  <title>全球高校文科调整地图</title>
+  <title>交互地图</title>
   <style>
     body {
       font-family: 'Microsoft YaHei', sans-serif;
-      background-color: #f9f9f9;
-      padding: 40px 20px 100px;
-      text-align: center;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f4f8;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
+
     h1 {
-      font-size: 28px;
-      margin-bottom: 20px;
-      color: #333;
+      text-align: center;
+      color: #005F99;
+      margin: 40px 0 20px;
+      font-size: 32px;
     }
+
+    .map-container {
+      width: 90%;
+      max-width: 1200px;
+      height: 80vh;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      border-radius: 12px;
+      overflow: hidden;
+      background-color: white;
+    }
+
     iframe {
       width: 100%;
-      max-width: 1000px;
-      height: 550px;
+      height: 100%;
       border: none;
-      border-radius: 10px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.1);
-      margin-bottom: 30px;
     }
+
     .btn {
+      margin: 30px auto 50px;
       padding: 14px 28px;
       font-size: 18px;
       background-color: #007ACC;
@@ -32,19 +46,21 @@
       border: none;
       border-radius: 10px;
       cursor: pointer;
+      transition: background-color 0.3s ease;
     }
+
     .btn:hover {
-      background-color: #005f99;
+      background-color: #005F99;
     }
   </style>
 </head>
 <body>
-  <h1>全球高校文科调整交互地图</h1>
+  <h1>全球高校文科停招情况</h1>
 
-  <!-- 嵌入 flo.host 地图 -->
-  <iframe src="https://flo.host/JfXr2ZY/" title="交互地图"></iframe>
+  <div class="map-container">
+    <iframe src="https://flo.host/JfXr2ZY/" title="交互地图"></iframe>
+  </div>
 
-  <!-- 跳转按钮 -->
-  <button class="btn" onclick="window.location.href='analysis.html'">查看网友弹幕分析</button>
+  <button class="btn" onclick="window.location.href='analysis.html'">查看弹幕分析内容</button>
 </body>
 </html>
