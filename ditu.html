@@ -6,14 +6,15 @@
   <style>
     body {
       font-family: 'Microsoft YaHei', sans-serif;
-      padding: 20px;
+      padding: 40px;
       text-align: center;
-      background-color: #f4f6f8;
-      color: #2c3e50;
+      background-color: #f9f9f9;
+      color: #333;
     }
 
     h1 {
-      font-size: 36px;
+      font-size: 32px;
+      color: #007ACC;
       margin-bottom: 30px;
     }
 
@@ -23,34 +24,32 @@
       border: none;
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      margin-bottom: 30px;
+      margin-bottom: 40px;
     }
 
     button {
-      padding: 14px 30px;
-      font-size: 18px;
-      font-weight: bold;
-      border: none;
+      padding: 14px 28px;
+      font-size: 16px;
       background-color: #007ACC;
       color: white;
-      border-radius: 10px;
+      border: none;
+      border-radius: 8px;
       cursor: pointer;
-      transition: background-color 0.3s ease, transform 0.2s ease;
+      transition: background-color 0.3s;
     }
 
     button:hover {
       background-color: #005F99;
-      transform: scale(1.05);
     }
   </style>
 </head>
 <body>
-  <h1>全球高校文科调整情况 · 交互地图</h1>
+  <h1>全球高校文科调整情况地图</h1>
 
-  <!-- 嵌入新的交互地图链接 -->
-  <iframe src="https://flo.host/JfXr2ZY/" title="交互地图"></iframe>
-  
-  <!-- 跳转到分析页面 -->
-  <button onclick="window.location.href='analysis.html'">查看分析内容</button>
+  <!-- 嵌入交互地图 -->
+  <iframe src="https://flo.host/JfXr2ZY/" title="交互地图展示"></iframe>
+
+  <!-- 跳转按钮，指向分析页面 -->
+  <button onclick="window.location.href='analysis.html'">查看网友看法分析内容</button>
 </body>
 </html>
